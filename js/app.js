@@ -3839,49 +3839,53 @@
     const da = new DynamicAdapt("max");
     da.init();
     window.addEventListener("load", (() => {
-        document.documentElement.classList.add("lock");
-        const tl = gsap.timeline({
-            onComplete: () => {
-                document.documentElement.classList.remove("lock");
-            }
-        });
-        tl.fromTo(".hero", {
-            y: "100%",
-            scale: .5
-        }, {
-            y: "0%",
-            scale: .5,
-            duration: 2.5,
-            borderRadius: 50,
-            ease: "elastic.inOut(1, 0.75)"
-        }).to(".hero", {
-            scale: 1,
-            borderRadius: 0,
-            height: "100%",
-            duration: .5,
-            ease: "elastic.out(1, 0.5)"
-        }).from(".hero__title  span", {
-            y: 400,
-            duration: 1,
-            stagger: .5,
-            ease: "power2.out"
-        }).fromTo(".hero-item", {
-            y: "-100%",
-            opacity: 0
-        }, {
-            y: "0%",
-            opacity: 1,
-            duration: .5,
-            ease: "bounce.out",
-            stagger: .2
-        });
-        tl.fromTo(".header", {
-            opacity: 0
-        }, {
-            opacity: 1,
-            duration: .5,
-            ease: "power2.inOut"
-        });
+        const startAnimationHero = () => {
+            const heroMain = document.querySelector(".hero-main");
+            if (!heroMain) return;
+            document.documentElement.classList.add("lock");
+            const tl = gsap.timeline({
+                onComplete: () => {
+                    document.documentElement.classList.remove("lock");
+                }
+            });
+            tl.fromTo(".hero", {
+                y: "100%",
+                scale: .5
+            }, {
+                y: "0%",
+                scale: .5,
+                duration: 2.5,
+                borderRadius: 50,
+                ease: "elastic.inOut(1, 0.75)"
+            }).to(".hero", {
+                scale: 1,
+                borderRadius: 0,
+                height: "100%",
+                duration: .5,
+                ease: "elastic.out(1, 0.5)"
+            }).from(".hero__title span", {
+                y: 400,
+                duration: 1,
+                stagger: .5,
+                ease: "power2.out"
+            }).fromTo(".hero-item", {
+                y: "-100%",
+                opacity: 0
+            }, {
+                y: "0%",
+                opacity: 1,
+                duration: .5,
+                ease: "bounce.out",
+                stagger: .2
+            }).fromTo(".header", {
+                opacity: 0
+            }, {
+                opacity: 1,
+                duration: .5,
+                ease: "power2.inOut"
+            });
+        };
+        startAnimationHero();
     }));
     window["FLS"] = true;
     menuInit();
