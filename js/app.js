@@ -3840,6 +3840,7 @@
     da.init();
     window.addEventListener("load", (() => {
         const startAnimationHero = () => {
+            console.log("45435435435435");
             const heroMain = document.querySelector(".hero-main");
             if (!heroMain) return;
             document.documentElement.classList.add("lock");
