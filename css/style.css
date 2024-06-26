@@ -1770,7 +1770,7 @@ h6 {
     position: fixed
   }
   .header._header-show {
-    opacity: 1
+    opacity: 1!important
   }
   .header._header-show .header__menu {
     transition: all .3s;
