@@ -5,8 +5,16 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240626172534">
+	<style>
+		body {
+			opacity: 0;
+		}
+
+		.loaded body {
+			opacity: 1;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20240629183113">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +25,7 @@
 		<header class="header" data-scroll="300" data-scroll-show="">
 			<div class="header__container">
 				<div class="header__content">
-					<a href="#" class="header__logo logo-main"><img src="img/logo-main.png" alt="Logo Main Page"></a>
+					<a href="#" class="header__logo logo-main"><img src="img/logo-main.webp" alt="Logo Main Page"></a>
 					<div class="header__menu menu">
 
 
@@ -42,7 +50,7 @@
 									</a>
 								</li>
 							</ul>
-							<a href="#" class="header__logo logo-menu"><img src="img/logo-main.png" alt="Logo Main Page"></a>
+							<a href="#" class="header__logo logo-menu"><img src="img/logo-main.webp" alt="Logo Main Page"></a>
 							<ul>
 								<li>
 									<a href="#">
@@ -71,13 +79,13 @@
 
 						<div class="header__menu-illustration-background">
 							<div class="item item-01">
-								<img src="img/menu-berries/menu-berries-1.png" alt="Image">
+								<img src="img/menu-berries/menu-berries-1.webp" alt="Image">
 							</div>
 							<div class="item item-02">
-								<img src="img/menu-berries/menu-berries-2.png" alt="Image">
+								<img src="img/menu-berries/menu-berries-2.webp" alt="Image">
 							</div>
 							<div class="item item-03">
-								<img src="img/menu-berries/menu-berries-3.png" alt="Image">
+								<img src="img/menu-berries/menu-berries-3.webp" alt="Image">
 							</div>
 						</div>
 					</div>
@@ -132,16 +140,20 @@
 				<div class="hero__container">
 					<div class="hero__body" data-prlx-mouse-wrapper>
 						<div class="hero__background-image backdrop-blur-md">
-							<img src="img/hero/hero-2.jpg" alt="Image">
+							<img src="img/hero/hero-2.webp" alt="Image">
 						</div>
 						<div class="hero__content">
-							<h1 class="heading-h1--big font-extrabold leading-tight text-white text-center md:mb-10 mb-6">
-								Грисування
-							</h1>
-							<div class="main-text">
-								<p>
-									Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
-								</p>
+							<div class="overflow-hidden">
+								<h1 class="heading-h1--big hero__title font-extrabold leading-tight text-white text-center md:mb-10 mb-6">
+									Грисування
+								</h1>
+							</div>
+							<div class="overflow-hidden">
+								<div class="main-text">
+									<p>
+										Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -151,8 +163,8 @@
 			<section class="about-product section-margin-bottom-lg">
 				<div class="about-product__container">
 					<div class="about-product__content">
-						<div class="about-product__header mb-8">
-							<h2 class="heading-h3--big text-center">
+						<div class="about-product__header mb-8 overflow-hidden">
+							<h2 class="heading-h3--big about-product__title text-center">
 								Інформація по послугам заморозки
 							</h2>
 						</div>
@@ -230,7 +242,7 @@
 								<div class="about-product-features__info-column column">
 									<div class="column__body">
 										<div class="column__image">
-											<img src="img/about-products-features/01.jpg" alt="Image">
+											<img src="img/about-products-features/01.webp" alt="Image">
 										</div>
 										<div class="column__content">
 											<div class="subheading">
@@ -242,7 +254,7 @@
 								<div class="about-product-features__info-column column">
 									<div class="column__body">
 										<div class="column__image">
-											<img src="img/about-products-features/02.jpg" alt="Image">
+											<img src="img/about-products-features/02.webp" alt="Image">
 										</div>
 										<div class="column__content">
 											<div class="subheading">
@@ -254,7 +266,7 @@
 								<div class="about-product-features__info-column column">
 									<div class="column__body">
 										<div class="column__image">
-											<img src="img/about-products-features/03.jpg" alt="Image">
+											<img src="img/about-products-features/03.webp" alt="Image">
 										</div>
 										<div class="column__content">
 											<div class="subheading">
@@ -333,13 +345,13 @@
 										<span class="mb-5 block">Система харчової безпеки CCM MS Standart </span>
 										<ul>
 											<li>
-												<img src="img/certificates/01.png" alt="Certificate">
+												<img src="img/certificates/01.webp" alt="Certificate">
 											</li>
 											<li>
-												<img src="img/certificates/02.png" alt="Certificate">
+												<img src="img/certificates/02.webp" alt="Certificate">
 											</li>
 											<li>
-												<img src="img/certificates/03.png" alt="Certificate">
+												<img src="img/certificates/03.webp" alt="Certificate">
 											</li>
 										</ul>
 									</div>
@@ -347,13 +359,13 @@
 										<span class="mb-5 block">Продукція сертифікована:</span>
 										<ul>
 											<li>
-												<img src="img/certificates/04.png" alt="Certificate">
+												<img src="img/certificates/04.webp" alt="Certificate">
 											</li>
 											<li>
-												<img src="img/certificates/05.png" alt="Certificate">
+												<img src="img/certificates/05.webp" alt="Certificate">
 											</li>
 											<li>
-												<img src="img/certificates/06.png" alt="Certificate">
+												<img src="img/certificates/06.webp" alt="Certificate">
 											</li>
 										</ul>
 									</div>
@@ -369,7 +381,7 @@
 							<span>
 								Розробка —
 							</span>
-							<img src="img/icons/mozar.png" alt="Image Develop">
+							<img src="img/icons/mozar.webp" alt="Image Develop">
 						</a>
 					</div>
 				</div>
@@ -391,7 +403,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240626172534"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20240629183113"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js?_v=20240629183113"></script>
+	<script src="js/app.min.js?_v=20240629183113"></script>
 </body>
 
 </html>

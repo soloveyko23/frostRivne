@@ -5,8 +5,16 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240626175147">
+	<style>
+		body {
+			opacity: 0;
+		}
+
+		.loaded body {
+			opacity: 1;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20240629183113">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +25,7 @@
 		<header class="header" data-scroll="300" data-scroll-show="">
 			<div class="header__container">
 				<div class="header__content">
-					<a href="#" class="header__logo logo-main"><img src="img/logo-main.png" alt="Logo Main Page"></a>
+					<a href="#" class="header__logo logo-main"><img src="img/logo-main.webp" alt="Logo Main Page"></a>
 					<div class="header__menu menu">
 
 
@@ -42,7 +50,7 @@
 									</a>
 								</li>
 							</ul>
-							<a href="#" class="header__logo logo-menu"><img src="img/logo-main.png" alt="Logo Main Page"></a>
+							<a href="#" class="header__logo logo-menu"><img src="img/logo-main.webp" alt="Logo Main Page"></a>
 							<ul>
 								<li>
 									<a href="#">
@@ -71,13 +79,13 @@
 
 						<div class="header__menu-illustration-background">
 							<div class="item item-01">
-								<img src="img/menu-berries/menu-berries-1.png" alt="Image">
+								<img src="img/menu-berries/menu-berries-1.webp" alt="Image">
 							</div>
 							<div class="item item-02">
-								<img src="img/menu-berries/menu-berries-2.png" alt="Image">
+								<img src="img/menu-berries/menu-berries-2.webp" alt="Image">
 							</div>
 							<div class="item item-03">
-								<img src="img/menu-berries/menu-berries-3.png" alt="Image">
+								<img src="img/menu-berries/menu-berries-3.webp" alt="Image">
 							</div>
 						</div>
 					</div>
@@ -132,7 +140,7 @@
 				<div class="hero__container">
 					<div class="hero__body" data-prlx-mouse-wrapper>
 						<div class="hero__background-image">
-							<img src="img/hero/hero.jpg" alt="Image">
+							<img src="img/hero/hero.webp" alt="Image">
 						</div>
 						<div class="hero__content">
 							<h1 class="heading-h1--big hero__title font-extrabold leading-tight overflow-hidden text-white text-center">
@@ -146,30 +154,32 @@
 						</div>
 						<div class="hero__parallax-items">
 							<div class="hero-item item item-01">
-								<img src="img/hero/berries/berries-1.png" alt="Image Berries 01" data-prlx-mouse data-prlx-dyr data-prlx-dxr data-prlx-cx="50" data-prlx-cy="50">
+								<img src="img/hero/berries/berries-1.webp" alt="Image Berries 01" data-prlx-mouse data-prlx-dyr data-prlx-dxr data-prlx-cx="50" data-prlx-cy="50">
 							</div>
 							<div class="hero-item item item-02">
-								<img src="img/hero/berries/berries-2.png" alt="Image Berries 02" data-prlx-mouse data-prlx-dyr data-prlx-dxr>
+								<img src="img/hero/berries/berries-2.webp" alt="Image Berries 02" data-prlx-mouse data-prlx-dyr data-prlx-dxr>
 							</div>
 							<div class="hero-item item item-03">
-								<img src="img/hero/berries/berries-3.png" alt="Image Berries 03" data-prlx-mouse>
+								<img src="img/hero/berries/berries-3.webp" alt="Image Berries 03" data-prlx-mouse>
 							</div>
 							<div class="hero-item item item-04">
-								<img src="img/hero/berries/berries-4.png" alt="Image Berries 04" data-prlx-mouse data-prlx-dyr data-prlx-dxr>
+								<img src="img/hero/berries/berries-4.webp" alt="Image Berries 04" data-prlx-mouse data-prlx-dyr data-prlx-dxr>
 							</div>
 							<div class="hero-item item item-05">
-								<img src="img/hero/berries/berries-5.png" alt="Image Berries 05" data-prlx-mouse>
+								<img src="img/hero/berries/berries-5.webp" alt="Image Berries 05" data-prlx-mouse>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- /.hero -->
-			<section class="services section-margin-bottom-lg">
+
+
+			<section class="services section-margin-bottom-lg" data-prlx-parent>
 				<div class="services__container">
 					<div class="services__content">
-						<div class="services__header mb-8">
-							<h2 class="heading-h2--big text-center">
+						<div class="services__header mb-8 overflow-hidden">
+							<h2 class="heading-h2--big services__title text-center">
 								Наші послуги
 							</h2>
 						</div>
@@ -180,7 +190,7 @@
 										<div class="link__caption subheading">Сортування</div>
 										<div class="link__right">
 											<div class="link__image">
-												<img src="img/services/sortuvanya.png" alt="Image">
+												<img src="img/services/sortuvanya.webp" alt="Image">
 											</div>
 											<div class="button button-arrow">
 												<div class="button-arrow__wrap">
@@ -206,7 +216,7 @@
 										<div class="link__caption subheading">Грисування</div>
 										<div class="link__right">
 											<div class="link__image">
-												<img src="img/services/grisuvanya.png" alt="Image">
+												<img src="img/services/grisuvanya.webp" alt="Image">
 											</div>
 											<div class="button button-arrow">
 												<div class="button-arrow__wrap">
@@ -232,7 +242,7 @@
 										<div class="link__caption subheading">Шнекування</div>
 										<div class="link__right">
 											<div class="link__image">
-												<img src="img/services/shnekuvanya.png" alt="Image">
+												<img src="img/services/shnekuvanya.webp" alt="Image">
 											</div>
 											<div class="button button-arrow">
 												<div class="button-arrow__wrap">
@@ -258,7 +268,7 @@
 										<div class="link__caption subheading">Зберігання</div>
 										<div class="link__right">
 											<div class="link__image">
-												<img src="img/services/zberiganya.png" alt="Image">
+												<img src="img/services/zberiganya.webp" alt="Image">
 											</div>
 											<div class="button button-arrow">
 												<div class="button-arrow__wrap">
@@ -284,7 +294,7 @@
 										<div class="link__caption subheading">Інспекція</div>
 										<div class="link__right">
 											<div class="link__image">
-												<img src="img/services/insekcija.png" alt="Image">
+												<img src="img/services/insekcija.webp" alt="Image">
 											</div>
 											<div class="button button-arrow">
 												<div class="button-arrow__wrap">
@@ -310,7 +320,7 @@
 										<div class="link__caption subheading">Перевірка металодетектором</div>
 										<div class="link__right">
 											<div class="link__image">
-												<img src="img/services/metal.png" alt="Image">
+												<img src="img/services/metal.webp" alt="Image">
 											</div>
 											<div class="button button-arrow">
 												<div class="button-arrow__wrap">
@@ -336,7 +346,7 @@
 										<div class="link__caption subheading">Фасування</div>
 										<div class="link__right">
 											<div class="link__image">
-												<img src="img/services/fasuvanya.png" alt="Image">
+												<img src="img/services/fasuvanya.webp" alt="Image">
 											</div>
 											<div class="button button-arrow">
 												<div class="button-arrow__wrap">
@@ -359,40 +369,329 @@
 								</a>
 							</div>
 						</div>
+						<div class="services__parallax-items">
+							<div class="services__parallax-item item-1" data-prlx-mouse data-coefficient="-80" data-direction="1" data-prlx="">
+								<img src="img/hero/berries/berries-1.webp" alt="Image">
+							</div>
+							<div class="services__parallax-item item-2" data-coefficient="-50" data-direction="-1" data-prlx="">
+								<img src="img/hero/berries/berries-2.webp" alt="Image">
+							</div>
+							<div class="services__parallax-item item-3" data-coefficient="-150" data-direction="1" data-prlx="">
+								<img src="img/hero/berries/berries-5.webp" alt="Image">
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 			<!-- /.services -->
+			<section class="main-products section-margin-bottom-lg">
+				<div class="main-products__container">
+					<div class="main-products__content relative">
+						<div class="main-products__header overflow-hidden">
+							<h2 class="heading-h2--big mb-5 main-products__title text-white">
+								Продукція
+							</h2>
+						</div>
+						<div class="main-products__slider swiper">
+							<div class="main-products__wrapper swiper-wrapper">
+								<a href="#" class="main-products__slide swiper-slide slide product-slide-1">
+									<div class="slide__body">
+										<div class="slide__image">
+											<img src="img/main-products/image.webp" alt="Image">
+										</div>
+										<div class="slide__content">
+											<div class="main-text md:text-center">
+												<p>
+													Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+												</p>
+											</div>
+											<div class="list-products__product product product-1">
+												<div class="product__body">
+													<div class="product__image">
+														<figure>
+															<img src="img/produts/ojina.webp" alt="Image">
+
+														</figure>
+													</div>
+													<div class="product__name subheading">
+														Ожина
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</a>
+								<a href="#" class="main-products__slide swiper-slide slide product-slide-2">
+									<div class="slide__body">
+										<div class="slide__image">
+											<img src="https://picsum.photos/1920/900" alt="Image">
+										</div>
+										<div class="slide__content">
+											<div class="main-text md:text-center">
+												<p>
+													Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+												</p>
+											</div>
+											<div class="list-products__product product product-2">
+												<div class="product__body">
+													<div class="product__image">
+														<figure>
+															<img src="img/produts/chornitsya.webp" alt="Image">
+
+														</figure>
+													</div>
+													<div class="product__name subheading">
+														Чорниця
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="main-products__slide swiper-slide slide product-slide-3">
+									<div class="slide__body">
+										<div class="slide__image">
+											<img src="img/main-products/image.webp" alt="Image">
+										</div>
+										<div class="slide__content">
+											<div class="main-text md:text-center">
+												<p>
+													Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+													Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+												</p>
+											</div>
+											<div class="list-products__product product product-3">
+												<div class="product__body">
+													<div class="product__image">
+														<figure>
+
+															<img src="img/produts/lohina.webp" alt="Image">
+														</figure>
+													</div>
+													<div class="product__name subheading">
+														Лохина
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="main-products__slide swiper-slide slide product-slide-4">
+									<div class="slide__body">
+										<div class="slide__image">
+											<img src="https://picsum.photos/1920/900" alt="Image">
+										</div>
+										<div class="slide__content">
+											<div class="main-text md:text-center">
+												<p>
+													Ґрисована продукція
+												</p>
+											</div>
+											<div class="list-products__product product product-4">
+												<div class="product__body">
+													<div class="product__image">
+														<figure>
+															<img src="img/produts/malina.webp" alt="Image">
+
+														</figure>
+													</div>
+													<div class="product__name subheading">
+														Малина
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="main-products__slide swiper-slide slide product-slide-5">
+									<div class="slide__body">
+										<div class="slide__image">
+											<img src="img/main-products/image.webp" alt="Image">
+										</div>
+										<div class="slide__content">
+											<div class="main-text md:text-center">
+												<p>
+													Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+												</p>
+											</div>
+											<dikv class="list-products__product product product-5">
+												<div class="product__body">
+													<div class="product__image">
+														<figure>
+															<img src="img/produts/oblipiha.webp" alt="Image">
+
+														</figure>
+													</div>
+													<div class="product__name subheading">
+														Обліпиха
+													</div>
+												</div>
+											</dikv>
+										</div>
+									</div>
+								</a>
+							</div>
+
+						</div>
+						<div class="main-products__list list-products__list">
+							<a href="cart.html" class="main-products__product list-products__product product product-1" data-slide="1">
+								<div class="product__body">
+									<div class="product__image">
+										<figure>
+											<img src="img/produts/ojina.webp" alt="Image">
+
+										</figure>
+									</div>
+									<div class="product__name subheading">
+										Ожина
+									</div>
+								</div>
+							</a>
+							<a href="cart.html" class="main-products__product list-products__product product product-2" data-slide="2">
+								<div class="product__body">
+									<div class="product__image">
+										<figure>
+											<img src="img/produts/chornitsya.webp" alt="Image">
+
+										</figure>
+									</div>
+									<div class="product__name subheading">
+										Чорниця
+									</div>
+								</div>
+							</a>
+							<a href="cart.html" class="main-products__product list-products__product product product-3" data-slide="3">
+								<div class="product__body">
+									<div class="product__image">
+										<figure>
+
+											<img src="img/produts/lohina.webp" alt="Image">
+										</figure>
+									</div>
+									<div class="product__name subheading">
+										Лохина
+									</div>
+								</div>
+							</a>
+							<a href="cart.html" class="main-products__product list-products__product product product-4" data-slide="4">
+								<div class="product__body">
+									<div class="product__image">
+										<figure>
+											<img src="img/produts/malina.webp" alt="Image">
+
+										</figure>
+									</div>
+									<div class="product__name subheading">
+										Малина
+									</div>
+								</div>
+							</a>
+							<a href="cart.html" class="main-products__product list-products__product product product-5" data-slide="5">
+								<div class="product__body">
+									<div class="product__image">
+										<figure>
+											<img src="img/produts/oblipiha.webp" alt="Image">
+
+										</figure>
+									</div>
+									<div class="product__name subheading">
+										Обліпиха
+									</div>
+								</div>
+							</a>
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /.main-products -->
+			<section class="brands section-margin-bottom-lg">
+				<div class="brands__container">
+					<div class="brands__content">
+						<div class="brands__body lg:grid lg:grid-cols-12 lg:gap-5">
+							<div class="brands__images images-brands lg:col-span-6">
+								<img src="img/brands/images/image.webp" alt="Image" class="current" data-brand-id="0">
+
+								<img src="https://picsum.photos/id/102/1900/1000" alt="Image" data-brand-id="1">
+								<img src="https://picsum.photos/1900/1000" alt="Image" data-brand-id="2">
+							</div>
+							<div class="brands__info info-brands xl:col-start-8 lg:col-start-7 xl:col-span-5 lg:col-span-6">
+								<div class="info-brands__header overflow-hidden">
+									<h2 class="heading-h2--big brands__title sm:mb-12 mb-6 text-center">
+										Наші бренди
+									</h2>
+								</div>
+
+								<div class="info-brands__content">
+									<div class="info-brands__content-images">
+										<img src="img/brands/brands/image.webp" alt="Image" class="current" data-brand-id="0">
+										<img src="img/brands/brands/image.webp" alt="Image" data-brand-id="1">
+										<img src="img/brands/brands/image.webp" alt="Image" data-brand-id="2">
+									</div>
+									<div class="info-brands__content-list">
+										<ul>
+											<li>
+												<button type="button" class="brands-link subheading current" data-brand-id="0">Добрик</button>
+
+
+											</li>
+											<li>
+												<button type="button" class="brands-link subheading" data-brand-id="1">Любисток</button>
+
+
+
+											</li>
+											<li>
+												<button type="button" class="brands-link subheading" data-brand-id="2">ТМ Деко</button>
+
+
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /.brands -->
 			<section class="about section-margin-bottom-lg">
 				<div class="about__container">
 					<div class="about__content grid md:grid-cols-12 gap-5">
 						<div class="about__video video-preview md:col-span-7" data-popup="#popupVideo" data-popup-youtube="eNvUS-6PTbs">
-							<img src="img/preview-video/preview.jpg" alt="Image">
+							<img src="img/preview-video/preview.webp" alt="Image">
 						</div>
 						<div class="about__info info-block md:col-span-5 md:mt-4">
-							<h2 class="heading-h2--big mb-5">
-								Про нас
-							</h2>
-							<div class="subheading mb-3">
-								<p>
-									У червні на територіях громад стартував сезон заготівлі дикорослих ягід, грибів. Їх очільники повинні контролювати, щоб цей процес відбувався легально, адже це хороша можливість суттєво поповнити бюджети.
-								</p>
+							<div class="overflow-hidden">
+								<h2 class="heading-h2--big mb-5 info-block__title">
+									Про нас
+								</h2>
 							</div>
-							<div class="main-text">
-								<p>
-									На пунктах прийому повинні бути лісові квитки, копії котрих завіряються мокрою печаткою і підписами осіб, які проводять заготівлю. Також обов’язковою є наявність журналу обліку заготовленої продукції.
-								</p>
+							<div class="overflow-hidden">
+								<div class="subheading mb-3">
+									<p>
+										У червні на територіях громад стартував сезон заготівлі дикорослих ягід, грибів. Їх очільники повинні контролювати, щоб цей процес відбувався легально, адже це хороша можливість суттєво поповнити бюджети.
+									</p>
+								</div>
+							</div>
+							<div class="overflow-hidden">
+								<div class="main-text">
+									<p>
+										На пунктах прийому повинні бути лісові квитки, копії котрих завіряються мокрою печаткою і підписами осіб, які проводять заготівлю. Також обов’язковою є наявність журналу обліку заготовленої продукції.
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- /.about -->
-			<section class="popular-blogs section-margin-bottom-lg">
+			<section class="popular-blogs section-margin-bottom-lg overflow-hidden">
 				<div class="popular-blogs__container">
-					<div class="popular-blogs__content">
-						<div class="popular-blogs__header mb-8">
-							<h2 class="heading-h2--big">
+					<div class="popular-blogs__content ">
+						<div class="popular-blogs__header overflow-hidden mb-8">
+							<h2 class="heading-h2--big popular-blogs__title">
 								Популярні статті в блозі
 							</h2>
 							<div class="popular-blogs__actions flex items-center lg:justify-end justify-center lg:mt-0 mt-6" data-da=".popular-blogs__footer-actions, 991.98">
@@ -441,7 +740,7 @@
 											<div class="post-main__body">
 												<a href="#" class="post-main__image mb-6">
 													<figure>
-														<img src="img/posts/image.jpg" alt="Image Post">
+														<img src="img/posts/image.webp" alt="Image Post">
 													</figure>
 												</a>
 												<div class="post-main__content">
@@ -472,7 +771,7 @@
 											<div class="post-main__body">
 												<a href="#" class="post-main__image mb-6">
 													<figure>
-														<img src="img/posts/image-2.jpg" alt="Image Post">
+														<img src="img/posts/image-2.webp" alt="Image Post">
 													</figure>
 												</a>
 												<div class="post-main__content">
@@ -504,7 +803,7 @@
 											<div class="post-main__body">
 												<a href="#" class="post-main__image mb-6">
 													<figure>
-														<img src="img/posts/image-3.jpg" alt="Image Post">
+														<img src="img/posts/image-3.webp" alt="Image Post">
 													</figure>
 												</a>
 												<div class="post-main__content">
@@ -535,7 +834,7 @@
 											<div class="post-main__body">
 												<a href="#" class="post-main__image mb-6">
 													<figure>
-														<img src="img/posts/image-3.jpg" alt="Image Post">
+														<img src="img/posts/image-3.webp" alt="Image Post">
 													</figure>
 												</a>
 												<div class="post-main__content">
@@ -636,13 +935,13 @@
 										<span class="mb-5 block">Система харчової безпеки CCM MS Standart </span>
 										<ul>
 											<li>
-												<img src="img/certificates/01.png" alt="Certificate">
+												<img src="img/certificates/01.webp" alt="Certificate">
 											</li>
 											<li>
-												<img src="img/certificates/02.png" alt="Certificate">
+												<img src="img/certificates/02.webp" alt="Certificate">
 											</li>
 											<li>
-												<img src="img/certificates/03.png" alt="Certificate">
+												<img src="img/certificates/03.webp" alt="Certificate">
 											</li>
 										</ul>
 									</div>
@@ -650,13 +949,13 @@
 										<span class="mb-5 block">Продукція сертифікована:</span>
 										<ul>
 											<li>
-												<img src="img/certificates/04.png" alt="Certificate">
+												<img src="img/certificates/04.webp" alt="Certificate">
 											</li>
 											<li>
-												<img src="img/certificates/05.png" alt="Certificate">
+												<img src="img/certificates/05.webp" alt="Certificate">
 											</li>
 											<li>
-												<img src="img/certificates/06.png" alt="Certificate">
+												<img src="img/certificates/06.webp" alt="Certificate">
 											</li>
 										</ul>
 									</div>
@@ -672,7 +971,7 @@
 							<span>
 								Розробка —
 							</span>
-							<img src="img/icons/mozar.png" alt="Image Develop">
+							<img src="img/icons/mozar.webp" alt="Image Develop">
 						</a>
 					</div>
 				</div>
@@ -694,9 +993,11 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js?_v=20240626175147"></script>
 
-	<script src="js/app.min.js?_v=20240626175147"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20240629183113"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js?_v=20240629183113"></script>
+	<script src="js/app.min.js?_v=20240629183113"></script>
 
 </body>
 
