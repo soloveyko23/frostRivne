@@ -3874,6 +3874,7 @@
                 slidesPerView: 1,
                 spaceBetween: 16,
                 speed: 800,
+                effect: "fade",
                 breakpoints: {
                     320: {
                         slidesPerView: 1.2,
@@ -3888,7 +3889,6 @@
                     },
                     992: {
                         autoHeight: false,
-                        effect: "fade",
                         slidesPerView: 1,
                         spaceBetween: 16,
                         touchRatio: 0,
