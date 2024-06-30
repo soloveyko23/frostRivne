@@ -6623,22 +6623,22 @@
             });
             tl.fromTo(".hero", {
                 y: "100%",
-                scale: .5,
-                borderRadius: "0%"
+                clipPath: "inset(25% 25% round 1.2rem)"
             }, {
                 y: "0%",
-                scale: .5,
                 duration: 1.5,
-                borderRadius: "50%",
-                ease: "power3.inOut"
-            }).to(".hero", {
-                scale: 1,
-                borderRadius: "0%",
-                height: "100%",
-                duration: .5,
-                ease: "power3.out"
+                ease: "power3.inOut",
+                clipPath: "inset(25% round 1.2rem)",
+                onComplete: () => {
+                    gsap.to(".hero", {
+                        delay: .3,
+                        clipPath: "inset(0% round 1.2rem)",
+                        duration: 1.5,
+                        ease: "power3.out"
+                    });
+                }
             }).from(".hero__title span", {
-                y: 400,
+                y: -400,
                 duration: .8,
                 stagger: .3,
                 ease: "power3.out"
@@ -6701,6 +6701,19 @@
                 id: "MainPRODUCTS"
             }
         });
+        gsap.from(".main-products", {
+            y: 100,
+            duration: .3,
+            scale: 1.2,
+            borderRadius: "50%",
+            scrollTrigger: {
+                trigger: ".main-products",
+                start: "top 80%",
+                end: "top 50%",
+                id: "MainPRODUCTS",
+                scrub: true
+            }
+        });
         sectionMainProducts.from(".main-products__title", {
             y: 50,
             opacity: 0,
@@ -6722,8 +6735,7 @@
             scrollTrigger: {
                 trigger: ".brands",
                 start: "top 80%",
-                end: "top 50%",
-                markers: true
+                end: "top 50%"
             }
         });
         gsap.from(".brands__images img", {
