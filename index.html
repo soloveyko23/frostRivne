@@ -14,7 +14,7 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240701164725">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240701214813">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,7 +114,7 @@
 				</div>
 			</div>
 		</header>
-		<div class="cookies-modal" style="display: none;">
+		<div class="cookies-modal" id="cookiesModal">
 			<div class="cookies-modal__body">
 				<div class="subheading mb-2">
 					Конфіденційність
@@ -129,482 +129,489 @@
 					<a href="#" class="button link">
 						Налаштування cookies
 					</a>
-					<a href="#" class="button button-lg button-primary">
-						Переглянути всі статті
+					<a href="#" class="button button-lg button-primary button-close-modal-cookies">
+						Ок
 					</a>
 				</div>
 			</div>
 		</div>
 		<main class="page">
-			<section class="hero hero-main section-margin-bottom-lg">
-				<div class="hero__container">
-					<div class="hero__body" data-prlx-mouse-wrapper>
-						<div class="hero__background-image">
-							<img src="img/hero/hero.webp" alt="Image">
-						</div>
-						<div class="hero__content">
-							<h1 class="heading-h1--big hero__title font-extrabold leading-tight overflow-hidden text-white text-center">
-								<p>
-									<span>Обробляємо </span><br>
-								</p>
-								<p>
-									<span>та зберігаємо ягоди</span>
-								</p>
-							</h1>
-						</div>
-						<div class="hero__parallax-items">
-							<div class="hero-item item item-01 box">
-								<img src="img/hero/berries/berries-1.webp" alt="Image Berries 01" data-prlx-mouse data-prlx-dyr data-prlx-dxr data-prlx-cx="50" data-prlx-cy="50">
+			<div class="first-section relative">
+				<section class="hero hero-main section-margin-bottom-lg">
+					<div class="hero__container">
+						<div class="hero__body" data-prlx-mouse-wrapper>
+							<div class="hero__background-image">
+								<img src="img/hero/hero.webp" alt="Image">
 							</div>
-							<div class="hero-item item item-02 box">
-								<img src="img/hero/berries/berries-2.webp" alt="Image Berries 02" data-prlx-mouse data-prlx-dyr data-prlx-dxr>
+							<div class="hero__content">
+								<h1 class="heading-h1--big hero__title font-extrabold leading-tight overflow-hidden text-white text-center">
+									<p>
+										<span>Обробляємо </span><br>
+									</p>
+									<p>
+										<span>та зберігаємо ягоди</span>
+									</p>
+								</h1>
 							</div>
-							<div class="hero-item item item-03 box">
-								<img src="img/hero/berries/berries-3.webp" alt="Image Berries 03" data-prlx-mouse>
-							</div>
-							<div class="hero-item item item-04 box">
-								<img src="img/hero/berries/berries-4.webp" alt="Image Berries 04" data-prlx-mouse data-prlx-dyr data-prlx-dxr>
-							</div>
-							<div class="hero-item item item-05 box">
-								<img src="img/hero/berries/berries-5.webp" alt="Image Berries 05" data-prlx-mouse>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- /.hero -->
-
-
-			<section class="services section-margin-bottom-lg" data-prlx-parent>
-				<div class="services__container">
-					<div class="services__content">
-						<div class="services__header mb-8 overflow-hidden">
-							<h2 class="heading-h2--big services__title text-center">
-								Наші послуги
-							</h2>
-						</div>
-						<div class="services__body">
-							<div class="services__links">
-								<a href="#" class="services__link link">
-									<div class="link__body">
-										<div class="link__caption subheading">Сортування</div>
-										<div class="link__right">
-											<div class="link__image">
-												<img src="img/services/sortuvanya.webp" alt="Image">
-											</div>
-											<div class="button button-arrow">
-												<div class="button-arrow__wrap">
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="services__link link">
-									<div class="link__body">
-										<div class="link__caption subheading">Грисування</div>
-										<div class="link__right">
-											<div class="link__image">
-												<img src="img/services/grisuvanya.webp" alt="Image">
-											</div>
-											<div class="button button-arrow">
-												<div class="button-arrow__wrap">
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="services__link link">
-									<div class="link__body">
-										<div class="link__caption subheading">Шнекування</div>
-										<div class="link__right">
-											<div class="link__image">
-												<img src="img/services/shnekuvanya.webp" alt="Image">
-											</div>
-											<div class="button button-arrow">
-												<div class="button-arrow__wrap">
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="services__link link">
-									<div class="link__body">
-										<div class="link__caption subheading">Зберігання</div>
-										<div class="link__right">
-											<div class="link__image">
-												<img src="img/services/zberiganya.webp" alt="Image">
-											</div>
-											<div class="button button-arrow">
-												<div class="button-arrow__wrap">
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="services__link link">
-									<div class="link__body">
-										<div class="link__caption subheading">Інспекція</div>
-										<div class="link__right">
-											<div class="link__image">
-												<img src="img/services/insekcija.webp" alt="Image">
-											</div>
-											<div class="button button-arrow">
-												<div class="button-arrow__wrap">
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="services__link link">
-									<div class="link__body">
-										<div class="link__caption subheading">Перевірка металодетектором</div>
-										<div class="link__right">
-											<div class="link__image">
-												<img src="img/services/metal.webp" alt="Image">
-											</div>
-											<div class="button button-arrow">
-												<div class="button-arrow__wrap">
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="services__link link">
-									<div class="link__body">
-										<div class="link__caption subheading">Фасування</div>
-										<div class="link__right">
-											<div class="link__image">
-												<img src="img/services/fasuvanya.webp" alt="Image">
-											</div>
-											<div class="button button-arrow">
-												<div class="button-arrow__wrap">
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-													<span>
-														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-															<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="services__parallax-items">
-							<div class="services__parallax-item item-1" data-prlx-mouse data-coefficient="-80" data-direction="1" data-prlx="">
-								<img src="img/hero/berries/berries-1.webp" alt="Image">
-							</div>
-							<div class="services__parallax-item item-2" data-coefficient="-50" data-direction="-1" data-prlx="">
-								<img src="img/hero/berries/berries-2.webp" alt="Image">
-							</div>
-							<div class="services__parallax-item item-3" data-coefficient="-150" data-direction="1" data-prlx="">
-								<img src="img/hero/berries/berries-5.webp" alt="Image">
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- /.services -->
-			<section class="main-products section-margin-bottom-lg">
-				<div class="main-products__container">
-					<div class="main-products__content relative">
-						<div class="main-products__header overflow-hidden">
-							<h2 class="heading-h2--big mb-5 main-products__title text-white">
-								Продукція
-							</h2>
-						</div>
-						<div class="main-products__slider swiper">
-							<div class="main-products__wrapper swiper-wrapper">
-								<a href="#" class="main-products__slide swiper-slide slide product-slide-1">
-									<div class="slide__body">
-										<div class="slide__image">
-											<img src="img/main-products/image.webp" alt="Image">
-										</div>
-										<div class="slide__content">
-											<div class="main-text md:text-center">
-												<p>
-													Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
-												</p>
-											</div>
-											<div class="list-products__product product product-1">
-												<div class="product__body">
-													<div class="product__image">
-														<figure>
-															<img src="img/produts/ojina.webp" alt="Image">
-
-														</figure>
-													</div>
-													<div class="product__name subheading">
-														Ожина
-													</div>
-												</div>
-											</div>
-										</div>
-
-									</div>
-								</a>
-								<a href="#" class="main-products__slide swiper-slide slide product-slide-2">
-									<div class="slide__body">
-										<div class="slide__image">
-											<img src="https://picsum.photos/1920/900" alt="Image">
-										</div>
-										<div class="slide__content">
-											<div class="main-text md:text-center">
-												<p>
-													Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
-												</p>
-											</div>
-											<div class="list-products__product product product-2">
-												<div class="product__body">
-													<div class="product__image">
-														<figure>
-															<img src="img/produts/chornitsya.webp" alt="Image">
-
-														</figure>
-													</div>
-													<div class="product__name subheading">
-														Чорниця
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="main-products__slide swiper-slide slide product-slide-3">
-									<div class="slide__body">
-										<div class="slide__image">
-											<img src="img/main-products/image.webp" alt="Image">
-										</div>
-										<div class="slide__content">
-											<div class="main-text md:text-center">
-												<p>
-													Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
-													Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
-												</p>
-											</div>
-											<div class="list-products__product product product-3">
-												<div class="product__body">
-													<div class="product__image">
-														<figure>
-
-															<img src="img/produts/lohina.webp" alt="Image">
-														</figure>
-													</div>
-													<div class="product__name subheading">
-														Лохина
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="main-products__slide swiper-slide slide product-slide-4">
-									<div class="slide__body">
-										<div class="slide__image">
-											<img src="https://picsum.photos/1920/900" alt="Image">
-										</div>
-										<div class="slide__content">
-											<div class="main-text md:text-center">
-												<p>
-													Ґрисована продукція
-												</p>
-											</div>
-											<div class="list-products__product product product-4">
-												<div class="product__body">
-													<div class="product__image">
-														<figure>
-															<img src="img/produts/malina.webp" alt="Image">
-
-														</figure>
-													</div>
-													<div class="product__name subheading">
-														Малина
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="main-products__slide swiper-slide slide product-slide-5">
-									<div class="slide__body">
-										<div class="slide__image">
-											<img src="img/main-products/image.webp" alt="Image">
-										</div>
-										<div class="slide__content">
-											<div class="main-text md:text-center">
-												<p>
-													Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
-												</p>
-											</div>
-											<dikv class="list-products__product product product-5">
-												<div class="product__body">
-													<div class="product__image">
-														<figure>
-															<img src="img/produts/oblipiha.webp" alt="Image">
-
-														</figure>
-													</div>
-													<div class="product__name subheading">
-														Обліпиха
-													</div>
-												</div>
-											</dikv>
-										</div>
-									</div>
-								</a>
-							</div>
-
-						</div>
-						<div class="main-products__list list-products__list">
-							<a href="cart.html" class="main-products__product list-products__product product product-1 box-end" data-slide="1">
-								<div class="product__body">
-									<div class="product__image">
-										<figure>
-											<img src="img/produts/ojina.webp" alt="Image">
-
-										</figure>
-									</div>
-									<div class="product__name subheading">
-										Ожина
-									</div>
-								</div>
-							</a>
-							<a href="cart.html" class="main-products__product list-products__product product product-2 box-end" data-slide="2">
-								<div class="product__body">
-									<div class="product__image">
-										<figure>
-											<img src="img/produts/chornitsya.webp" alt="Image">
-
-										</figure>
-									</div>
-									<div class="product__name subheading">
-										Чорниця
-									</div>
-								</div>
-							</a>
-							<a href="cart.html" class="main-products__product list-products__product product product-3 box-end" data-slide="3">
-								<div class="product__body">
-									<div class="product__image">
-										<figure>
-
-											<img src="img/produts/lohina.webp" alt="Image">
-										</figure>
-									</div>
-									<div class="product__name subheading">
-										Лохина
-									</div>
-								</div>
-							</a>
-							<a href="cart.html" class="main-products__product list-products__product product product-4 box-end" data-slide="4">
-								<div class="product__body">
-									<div class="product__image">
-										<figure>
-											<img src="img/produts/malina.webp" alt="Image">
-
-										</figure>
-									</div>
-									<div class="product__name subheading">
-										Малина
-									</div>
-								</div>
-							</a>
-							<a href="cart.html" class="main-products__product list-products__product product product-5 box-end" data-slide="5">
-								<div class="product__body">
-									<div class="product__image">
-										<figure>
-											<img src="img/produts/oblipiha.webp" alt="Image">
-
-										</figure>
-									</div>
-									<div class="product__name subheading">
-										Обліпиха
-									</div>
-								</div>
-							</a>
 
 						</div>
 					</div>
+				</section>
+				<!-- /.hero -->
+				<div class="first-section__container relative">
+					<div class="hero__parallax-items">
+						<div class="hero-item item item-01 box">
+							<img src="img/hero/berries/berries-1.webp" alt="Image Berries 01" data-prlx-mouse data-prlx-dyr data-prlx-dxr data-prlx-cx="50" data-prlx-cy="50">
+						</div>
+						<div class="hero-item item item-02 box">
+							<img src="img/hero/berries/berries-2.webp" alt="Image Berries 02" data-prlx-mouse data-prlx-dyr data-prlx-dxr>
+						</div>
+						<div class="hero-item item item-03 box">
+							<img src="img/hero/berries/berries-3.webp" alt="Image Berries 03" data-prlx-mouse>
+						</div>
+						<div class="hero-item item item-04 box">
+							<img src="img/hero/berries/berries-4.webp" alt="Image Berries 04" data-prlx-mouse data-prlx-dyr data-prlx-dxr>
+						</div>
+						<div class="hero-item item item-05 box">
+							<img src="img/hero/berries/berries-5.webp" alt="Image Berries 05" data-prlx-mouse>
+						</div>
+					</div>
 				</div>
-			</section>
+				<section class="services section-margin-bottom-lg" data-prlx-parent>
+					<div class="services__container">
+						<div class="services__content">
+							<div class="services__header mb-8 overflow-hidden">
+								<h2 class="heading-h2--big services__title text-center">
+									Наші послуги
+								</h2>
+							</div>
+							<div class="services__body">
+								<div class="services__links">
+									<a href="#" class="services__link link">
+										<div class="link__body">
+											<div class="link__caption subheading">Сортування</div>
+											<div class="link__right">
+												<div class="link__image">
+													<img src="img/services/sortuvanya.webp" alt="Image">
+												</div>
+												<div class="button button-arrow">
+													<div class="button-arrow__wrap">
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="services__link link">
+										<div class="link__body">
+											<div class="link__caption subheading">Грисування</div>
+											<div class="link__right">
+												<div class="link__image">
+													<img src="img/services/grisuvanya.webp" alt="Image">
+												</div>
+												<div class="button button-arrow">
+													<div class="button-arrow__wrap">
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="services__link link">
+										<div class="link__body">
+											<div class="link__caption subheading">Шнекування</div>
+											<div class="link__right">
+												<div class="link__image">
+													<img src="img/services/shnekuvanya.webp" alt="Image">
+												</div>
+												<div class="button button-arrow">
+													<div class="button-arrow__wrap">
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="services__link link">
+										<div class="link__body">
+											<div class="link__caption subheading">Зберігання</div>
+											<div class="link__right">
+												<div class="link__image">
+													<img src="img/services/zberiganya.webp" alt="Image">
+												</div>
+												<div class="button button-arrow">
+													<div class="button-arrow__wrap">
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="services__link link">
+										<div class="link__body">
+											<div class="link__caption subheading">Інспекція</div>
+											<div class="link__right">
+												<div class="link__image">
+													<img src="img/services/insekcija.webp" alt="Image">
+												</div>
+												<div class="button button-arrow">
+													<div class="button-arrow__wrap">
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="services__link link">
+										<div class="link__body">
+											<div class="link__caption subheading">Перевірка металодетектором</div>
+											<div class="link__right">
+												<div class="link__image">
+													<img src="img/services/metal.webp" alt="Image">
+												</div>
+												<div class="button button-arrow">
+													<div class="button-arrow__wrap">
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="services__link link">
+										<div class="link__body">
+											<div class="link__caption subheading">Фасування</div>
+											<div class="link__right">
+												<div class="link__image">
+													<img src="img/services/fasuvanya.webp" alt="Image">
+												</div>
+												<div class="button button-arrow">
+													<div class="button-arrow__wrap">
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+														<span>
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M1.33333 6H10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+																<path d="M6 1.33334L10.6667 6.00001L6 10.6667" stroke="#0E0E20" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- <div class="services__parallax-items">
+                  <div class="services__parallax-item item-1" data-prlx-mouse data-coefficient="-80" data-direction="1" data-prlx="">
+                    <img src="img/hero/berries/berries-1.webp" alt="Image">
+                  </div>
+                  <div class="services__parallax-item item-2" data-coefficient="-50" data-direction="-1" data-prlx="">
+                    <img src="img/hero/berries/berries-2.webp" alt="Image">
+                  </div>
+                  <div class="services__parallax-item item-3" data-coefficient="-150" data-direction="1" data-prlx="">
+                    <img src="img/hero/berries/berries-5.webp" alt="Image">
+                  </div>
+                </div> -->
+						</div>
+					</div>
+				</section>
+				<!-- /.services -->
+				<section class="main-products section-margin-bottom-lg">
+					<div class="main-products__container">
+						<div class="main-products__content relative">
+							<div class="main-products__header overflow-hidden">
+								<h2 class="heading-h2--big mb-5 main-products__title text-white">
+									Продукція
+								</h2>
+							</div>
+							<div class="main-products__slider swiper">
+								<div class="main-products__wrapper swiper-wrapper">
+									<a href="#" class="main-products__slide swiper-slide slide product-slide-1">
+										<div class="slide__body">
+											<div class="slide__image">
+												<img src="img/main-products/image.webp" alt="Image">
+											</div>
+											<div class="slide__content">
+												<div class="main-text md:text-center">
+													<p>
+														Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+													</p>
+												</div>
+												<div class="list-products__product product product-1">
+													<div class="product__body">
+														<div class="product__image">
+															<figure>
+																<img src="img/produts/ojina.webp" alt="Image">
+
+															</figure>
+														</div>
+														<div class="product__name subheading">
+															Ожина
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</a>
+									<a href="#" class="main-products__slide swiper-slide slide product-slide-2">
+										<div class="slide__body">
+											<div class="slide__image">
+												<img src="https://picsum.photos/1920/900" alt="Image">
+											</div>
+											<div class="slide__content">
+												<div class="main-text md:text-center">
+													<p>
+														Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+													</p>
+												</div>
+												<div class="list-products__product product product-2">
+													<div class="product__body">
+														<div class="product__image">
+															<figure>
+																<img src="img/produts/chornitsya.webp" alt="Image">
+
+															</figure>
+														</div>
+														<div class="product__name subheading">
+															Чорниця
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="main-products__slide swiper-slide slide product-slide-3">
+										<div class="slide__body">
+											<div class="slide__image">
+												<img src="img/main-products/image.webp" alt="Image">
+											</div>
+											<div class="slide__content">
+												<div class="main-text md:text-center">
+													<p>
+														Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+														Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+													</p>
+												</div>
+												<div class="list-products__product product product-3">
+													<div class="product__body">
+														<div class="product__image">
+															<figure>
+
+																<img src="img/produts/lohina.webp" alt="Image">
+															</figure>
+														</div>
+														<div class="product__name subheading">
+															Лохина
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="main-products__slide swiper-slide slide product-slide-4">
+										<div class="slide__body">
+											<div class="slide__image">
+												<img src="https://picsum.photos/1920/900" alt="Image">
+											</div>
+											<div class="slide__content">
+												<div class="main-text md:text-center">
+													<p>
+														Ґрисована продукція
+													</p>
+												</div>
+												<div class="list-products__product product product-4">
+													<div class="product__body">
+														<div class="product__image">
+															<figure>
+																<img src="img/produts/malina.webp" alt="Image">
+
+															</figure>
+														</div>
+														<div class="product__name subheading">
+															Малина
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="main-products__slide swiper-slide slide product-slide-5">
+										<div class="slide__body">
+											<div class="slide__image">
+												<img src="img/main-products/image.webp" alt="Image">
+											</div>
+											<div class="slide__content">
+												<div class="main-text md:text-center">
+													<p>
+														Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція використовується у харчовій, переробній, хімічній та косметичній промисловості. Ґрисована продукція. Ґрисована продукція
+													</p>
+												</div>
+												<dikv class="list-products__product product product-5">
+													<div class="product__body">
+														<div class="product__image">
+															<figure>
+																<img src="img/produts/oblipiha.webp" alt="Image">
+
+															</figure>
+														</div>
+														<div class="product__name subheading">
+															Обліпиха
+														</div>
+													</div>
+												</dikv>
+											</div>
+										</div>
+									</a>
+								</div>
+
+							</div>
+							<div class="main-products__list list-products__list">
+								<a href="cart.html" class="main-products__product list-products__product product product-1 box-end" data-slide="1">
+									<div class="product__body">
+										<div class="product__image">
+											<figure>
+												<img src="img/produts/ojina.webp" alt="Image">
+
+											</figure>
+										</div>
+										<div class="product__name subheading">
+											Ожина
+										</div>
+									</div>
+								</a>
+								<a href="cart.html" class="main-products__product list-products__product product product-2 box-end" data-slide="2">
+									<div class="product__body">
+										<div class="product__image">
+											<figure>
+												<img src="img/produts/chornitsya.webp" alt="Image">
+
+											</figure>
+										</div>
+										<div class="product__name subheading">
+											Чорниця
+										</div>
+									</div>
+								</a>
+								<a href="cart.html" class="main-products__product list-products__product product product-3 box-end" data-slide="3">
+									<div class="product__body">
+										<div class="product__image">
+											<figure>
+
+												<img src="img/produts/lohina.webp" alt="Image">
+											</figure>
+										</div>
+										<div class="product__name subheading">
+											Лохина
+										</div>
+									</div>
+								</a>
+								<a href="cart.html" class="main-products__product list-products__product product product-4 box-end" data-slide="4">
+									<div class="product__body">
+										<div class="product__image">
+											<figure>
+												<img src="img/produts/malina.webp" alt="Image">
+
+											</figure>
+										</div>
+										<div class="product__name subheading">
+											Малина
+										</div>
+									</div>
+								</a>
+								<a href="cart.html" class="main-products__product list-products__product product product-5 box-end" data-slide="5">
+									<div class="product__body">
+										<div class="product__image">
+											<figure>
+												<img src="img/produts/oblipiha.webp" alt="Image">
+
+											</figure>
+										</div>
+										<div class="product__name subheading">
+											Обліпиха
+										</div>
+									</div>
+								</a>
+
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+
+
+
 			<!-- /.main-products -->
 			<section class="brands section-margin-bottom-lg">
 				<div class="brands__container">
@@ -983,9 +990,9 @@
 	</div>
 
 
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20240701164725"></script>
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js?_v=20240701164725"></script>
-	<script src="js/app.min.js?_v=20240701164725"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20240701214813"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js?_v=20240701214813"></script>
+	<script src="js/app.min.js?_v=20240701214813"></script>
 
 </body>
 

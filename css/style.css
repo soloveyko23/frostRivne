@@ -1023,12 +1023,6 @@ h6 {
 .cookies-modal .main-text {
   font-size: 1rem
 }
-.cookies-modal .buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  align-items: center
-}
 .cookies-modal .buttons .link {
   text-align: center
 }
@@ -1104,7 +1098,7 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 5
+  z-index: 20
 }
 .header._header-scroll {
   opacity: 0!important;
@@ -1186,7 +1180,7 @@ h6 {
 .header__language ul {
   align-items: center;
   gap: .25rem;
-  flex-direction: row
+  flex-direction: row!important
 }
 .header__language a {
   width: 3rem;
@@ -1413,15 +1407,17 @@ h6 {
   min-height: 43.75rem
 }
 .hero__parallax-items {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0
+  bottom: 0;
+  max-width: 1840px;
+  margin: 0 auto
 }
 .hero__parallax-items .item {
-  position: fixed;
+  position: absolute;
   z-index: 10
 }
 .hero__parallax-items .item img {
@@ -1436,7 +1432,7 @@ h6 {
   left: 93%
 }
 .hero__parallax-items .item-03 {
-  top: 88%;
+  top: 77%;
   left: 7%
 }
 .hero__parallax-items .item-04 {
@@ -1448,7 +1444,7 @@ h6 {
   width: 100%
 }
 .hero__parallax-items .item-05 {
-  bottom: 12%;
+  bottom: 4%;
   right: 7%
 }
 .hero__body {
@@ -1708,8 +1704,22 @@ h6 {
 }
 .cookies-modal {
   position: fixed;
-  bottom: 20px;
-  right: 20px
+  bottom: 1.25rem;
+  right: 1.25rem;
+  left: 1.25rem;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  transition: all .3s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none
+}
+.cookies-modal.show {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
 }
 .post-content {
   margin-bottom: 5rem;
@@ -2026,6 +2036,12 @@ h6 {
   display: none!important
 }
 @media (min-width:29.99875em) {
+  .cookies-modal .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: center
+  }
   .header__language ul {
     display: inline-flex
   }
@@ -2748,7 +2764,8 @@ h6 {
   }
   .header__language li.checked a {
     color: var(--neutral--00);
-    background-color: #e02849
+    background-color: #e02849;
+    border: 1px solid #e02849
   }
   .header__language a {
     color: var(--blue-link);
@@ -2975,6 +2992,9 @@ h6 {
     gap: 2.25rem;
     grid-template-columns: repeat(1,1fr)
   }
+  .cookies-modal {
+    box-shadow: rgba(99,99,99,.2) 0 2px 8px 0
+  }
   .post-content img {
     border-radius: 1.5rem
   }
@@ -3004,6 +3024,10 @@ h6 {
   }
 }
 @media (max-width:29.99875em) {
+  .cookies-modal .buttons {
+    display: grid;
+    gap: .75rem
+  }
   .header__language ul {
     display: flex!important
   }

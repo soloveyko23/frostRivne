@@ -3819,21 +3819,23 @@
                 slidesPerView: 1,
                 spaceBetween: 16,
                 speed: 800,
-                effect: "fade",
                 breakpoints: {
                     320: {
                         slidesPerView: 1.2,
                         spaceBetween: 16,
                         autoHeight: true,
-                        centeredSlides: true
+                        centeredSlides: true,
+                        effect: false
                     },
                     570: {
                         slidesPerView: 2,
                         spaceBetween: 16,
-                        autoHeight: true
+                        autoHeight: true,
+                        effect: false
                     },
                     992: {
                         autoHeight: false,
+                        effect: "fade",
                         slidesPerView: 1,
                         spaceBetween: 16,
                         touchRatio: 0,
@@ -6497,17 +6499,17 @@
                 }
             });
             tl.fromTo(".hero", {
-                clipPath: "inset(25% 25% 50% round 1.2rem)",
+                clipPath: "inset(25% 25% 25% 25% round 1.2rem)",
                 y: "100%"
             }, {
                 y: "0%",
                 duration: 2.5,
                 ease: "power3.inOut",
-                clipPath: "inset(25% 25% 5% round 1.2rem)",
+                clipPath: "inset(25% 25% 25% 25%  round 1.2rem)",
                 onComplete: () => {
                     gsap.to(".hero", {
                         delay: .3,
-                        clipPath: "inset(0% 0% 0% round 1.2rem)",
+                        clipPath: "inset(0% round 0rem)",
                         duration: 1.5,
                         ease: "power3.out"
                     });
@@ -6536,28 +6538,6 @@
         };
         startAnimationHero();
         gsap.registerPlugin(ScrollTrigger);
-        const boxes = document.querySelectorAll(".box");
-        const boxEnds = document.querySelectorAll(".box-end");
-        boxes.forEach(((box, index) => {
-            const boxEnd = boxEnds[index];
-            const topValue = parseFloat(window.getComputedStyle(box).getPropertyValue("top"));
-            const leftValue = parseFloat(window.getComputedStyle(box).getPropertyValue("left"));
-            console.log(index, topValue);
-            console.log(index, leftValue);
-            gsap.to(box, {
-                x: boxEnd.offsetLeft - leftValue,
-                y: boxEnd.offsetTop - topValue,
-                scale: 1,
-                rotate: 0,
-                opacity: 0,
-                scrollTrigger: {
-                    trigger: ".services",
-                    start: "bottom bottom",
-                    end: "bottom top",
-                    scrub: true
-                }
-            });
-        }));
         const sectionServices = gsap.timeline({
             scrollTrigger: {
                 trigger: ".services",
@@ -6599,36 +6579,106 @@
                 id: "MainPRODUCTS"
             }
         });
-        gsap.from(".main-products", {
-            y: 100,
-            duration: .3,
-            scale: 1.2,
-            borderRadius: "50%",
-            scrollTrigger: {
-                trigger: ".main-products",
-                start: "top 80%",
-                end: "top 50%",
-                id: "MainPRODUCTS",
-                scrub: true
-            }
-        });
         sectionMainProducts.from(".main-products__title", {
             y: 50,
             opacity: 0,
             duration: .3
         }, "-=0.5").from(".main-products__slide", {
-            opacity: 0,
             duration: .5,
-            y: 50,
             stagger: .3,
             delay: 1
         }, "-=0.7");
-        if (window.matchMedia("(min-width: 991.98px)").matches) sectionMainProducts.from(".main-products__slide .slide__content", {
-            y: 150,
-            opacity: 0,
-            duration: .2,
-            delay: .3
-        }, "-=1");
+        if (window.matchMedia("(min-width: 991.98px)").matches) {
+            sectionMainProducts.from(".main-products__slide .slide__content", {
+                y: 150,
+                opacity: 0,
+                duration: .2,
+                delay: .1
+            }, "-=0.5");
+            gsap.from(".main-products", {
+                y: 100,
+                duration: .3,
+                scale: 1.2,
+                borderRadius: "50%",
+                scrollTrigger: {
+                    trigger: ".main-products",
+                    start: "top 80%",
+                    end: "top 50%",
+                    id: "MainPRODUCTS",
+                    scrub: true
+                }
+            });
+            gsap.to(".hero__parallax-items .item-01 img", {
+                scale: .5,
+                rotate: 360,
+                opacity: 0,
+                duration: .5,
+                scrollTrigger: {
+                    trigger: ".first-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    markers: true,
+                    id: "top"
+                }
+            });
+            gsap.to(".hero__parallax-items .item-02 img", {
+                scale: .5,
+                rotate: -360,
+                opacity: 0,
+                duration: .3,
+                scrollTrigger: {
+                    trigger: ".first-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    markers: true,
+                    id: "top"
+                }
+            });
+            gsap.to(".hero__parallax-items .item-03 img", {
+                scale: .5,
+                rotate: 180,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".first-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    markers: true,
+                    id: "top"
+                }
+            });
+            gsap.to(".hero__parallax-items .item-04 img", {
+                scale: .5,
+                rotate: -90,
+                opacity: 0,
+                duration: .4,
+                scrollTrigger: {
+                    trigger: ".first-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    markers: true,
+                    id: "top"
+                }
+            });
+            gsap.to(".hero__parallax-items .item-05 img", {
+                scale: .5,
+                rotate: -250,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".first-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    markers: true,
+                    id: "top"
+                }
+            });
+        }
         const sectionBrands = gsap.timeline({
             scrollTrigger: {
                 trigger: ".brands",
@@ -6711,9 +6761,7 @@
             scrollTrigger: {
                 trigger: ".about",
                 start: "top 95%",
-                end: "top 50%",
-                markers: true,
-                id: "top"
+                end: "top 50%"
             }
         });
         sectionAbout.to(".about", {
@@ -6724,26 +6772,25 @@
             opacity: 0,
             duration: .4,
             stagger: .15,
-            delay: .15,
             ease: "power2.inOut"
         }, "-=0.5").from(".about .info-block__title", {
             y: 50,
             opacity: 0,
             duration: .4,
-            delay: .2
+            delay: .1
         }, "-=0.5").from(".about .subheading", {
             y: 100,
             opacity: 0,
             duration: .4,
             stagger: .15,
-            delay: .4
+            delay: .15
         }, "-=0.5").from(".about .main-text", {
             y: 100,
             opacity: 0,
             duration: .4,
             stagger: .15,
-            delay: .3,
-            ease: "power2.inOut"
+            ease: "power2.inOut",
+            delay: .2
         }, "-=0.5");
         const sectionPopularBlogs = gsap.timeline({
             scrollTrigger: {
@@ -6759,19 +6806,19 @@
             y: 100,
             opacity: 0,
             duration: .4,
-            delay: .2,
+            delay: .1,
             ease: "power2.inOut"
         }, "-=0.5").from(".popular-blogs__actions", {
             y: 50,
             opacity: 0,
             duration: .5,
-            delay: .5
+            delay: .15
         }, "-=0.7").from(".popular-blogs__slide", {
             y: 100,
             opacity: 0,
             duration: .4,
-            stagger: .15,
-            delay: .4
+            stagger: .5,
+            delay: .2
         }, "-=0.5");
         gsap.from(".hero-no-bg:not(.hero-cart) .hero__title", {
             y: 50,
@@ -6957,6 +7004,28 @@
             }));
         }));
     }));
+    function setupCookiesModal() {
+        document.addEventListener("DOMContentLoaded", (() => {
+            const modal = document.getElementById("cookiesModal");
+            const closeButton = document.querySelector(".button-close-modal-cookies");
+            const modalDisplayTime = 3e3;
+            const hideDuration = 24 * 60 * 60 * 1e3;
+            const showModal = () => {
+                modal.classList.add("show");
+            };
+            const closeModal = () => {
+                modal.classList.remove("show");
+                localStorage.setItem("cookiesModalClosedTime", Date.now().toString());
+            };
+            const shouldShowModal = () => {
+                const lastClosedTime = localStorage.getItem("cookiesModalClosedTime");
+                return !lastClosedTime || Date.now() - parseInt(lastClosedTime, 10) >= hideDuration;
+            };
+            if (shouldShowModal()) setTimeout(showModal, modalDisplayTime);
+            closeButton.addEventListener("click", closeModal);
+        }));
+    }
+    setupCookiesModal();
     window["FLS"] = true;
     addLoadedClass();
     menuInit();
