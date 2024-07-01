@@ -486,9 +486,6 @@ video {
 .grid {
   display: grid
 }
-.\!hidden {
-  display: none!important
-}
 .hidden {
   display: none
 }
@@ -2488,8 +2485,8 @@ h6 {
   .lg\:mt-0 {
     margin-top: 0
   }
-  .lg\:block {
-    display: block
+  .lg\:\!block {
+    display: block!important
   }
   .lg\:grid {
     display: grid

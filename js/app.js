@@ -3812,37 +3812,48 @@
                 },
                 on: {}
             });
-            const mainSliderProducts = new swiper_core_Swiper(".main-products__slider", {
+            let windowWidth = window.innerWidth;
+            let params;
+            if (windowWidth <= 991.98) params = {
                 modules: [ Navigation, EffectFade ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 16,
                 speed: 800,
+                effect: "slide",
                 breakpoints: {
                     320: {
                         slidesPerView: 1.2,
                         spaceBetween: 16,
                         autoHeight: true,
-                        centeredSlides: true,
-                        effect: false
+                        centeredSlides: true
                     },
                     570: {
                         slidesPerView: 2,
                         spaceBetween: 16,
-                        autoHeight: true,
-                        effect: false
-                    },
+                        autoHeight: true
+                    }
+                }
+            }; else if (windowWidth > 991.98) params = {
+                modules: [ Navigation, EffectFade ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 16,
+                speed: 800,
+                effect: "fade",
+                breakpoints: {
                     992: {
                         autoHeight: false,
-                        effect: "fade",
                         slidesPerView: 1,
                         spaceBetween: 16,
                         touchRatio: 0,
-                        simulateTouch: false
+                        simulateTouch: true
                     }
                 }
-            });
+            };
+            let mainSliderProducts = new swiper_core_Swiper(".main-products__slider", params);
             const goToSlide = index => {
                 mainSliderProducts.slideTo(index - 1);
             };
