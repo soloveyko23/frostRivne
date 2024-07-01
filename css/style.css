@@ -1412,8 +1412,17 @@ h6 {
   height: calc(100vh - 4.25rem);
   min-height: 43.75rem
 }
+.hero__parallax-items {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0
+}
 .hero__parallax-items .item {
-  position: absolute
+  position: fixed;
+  z-index: 10
 }
 .hero__parallax-items .item img {
   width: 100%
@@ -1424,10 +1433,10 @@ h6 {
 }
 .hero__parallax-items .item-02 {
   top: 14%;
-  right: 7%
+  left: 93%
 }
 .hero__parallax-items .item-03 {
-  bottom: 12%;
+  top: 88%;
   left: 7%
 }
 .hero__parallax-items .item-04 {
@@ -1883,21 +1892,19 @@ h6 {
   overflow: hidden
 }
 .brands__images img {
-  height: 100%;
   max-width: 100%;
-  width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
-  transition: all 1s ease;
-  clip-path: inset(50% round 1.2rem)
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1
 }
-.brands__images img.current {
-  opacity: 1;
-  position: relative;
-  transition: all 1s ease;
-  z-index: 2;
-  clip-path: inset(0 round 1.2rem)
+.brands__images img:first-child {
+  opacity: 1
 }
 .brands__info .info-brands__content-list {
   max-width: 37.5rem
