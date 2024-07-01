@@ -486,6 +486,9 @@ video {
 .grid {
   display: grid
 }
+.\!hidden {
+  display: none!important
+}
 .hidden {
   display: none
 }
@@ -1018,7 +1021,7 @@ h6 {
   padding: 1.5rem;
   border-radius: 2.5rem;
   max-width: 35rem;
-  z-index: 10
+  z-index: 20
 }
 .cookies-modal .main-text {
   font-size: 1rem
@@ -1408,6 +1411,7 @@ h6 {
 }
 .hero__parallax-items {
   position: fixed;
+  pointer-events: none;
   z-index: 10;
   top: 0;
   left: 0;
@@ -1706,10 +1710,9 @@ h6 {
   position: fixed;
   bottom: 1.25rem;
   right: 1.25rem;
-  left: 1.25rem;
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-  transition: all .3s;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  transition: all .5s ease;
   opacity: 0;
   visibility: hidden;
   pointer-events: none
@@ -2485,8 +2488,14 @@ h6 {
   .lg\:mt-0 {
     margin-top: 0
   }
+  .lg\:block {
+    display: block
+  }
   .lg\:grid {
     display: grid
+  }
+  .lg\:hidden {
+    display: none
   }
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12,minmax(0,1fr))
@@ -2960,6 +2969,9 @@ h6 {
     align-items: center;
     margin-bottom: 1.5rem
   }
+  .hero__parallax-items .item-02 {
+    left: 85%
+  }
   .hero__parallax-items .item-04 {
     bottom: 20%
   }
@@ -2991,6 +3003,9 @@ h6 {
   .blog__posts {
     gap: 2.25rem;
     grid-template-columns: repeat(1,1fr)
+  }
+  .cookies-modal {
+    left: 1.25rem
   }
   .cookies-modal {
     box-shadow: rgba(99,99,99,.2) 0 2px 8px 0
@@ -3047,7 +3062,7 @@ h6 {
     margin-bottom: 0
   }
   .hero__parallax-items .item img {
-    max-width: 29.1678819951vw
+    max-width: 25.0010417101vw
   }
   .hero__parallax-items .item-04 {
     bottom: 25%

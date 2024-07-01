@@ -6618,7 +6618,6 @@
                     start: "top top",
                     end: "bottom bottom",
                     scrub: 1,
-                    markers: true,
                     id: "top"
                 }
             });
@@ -6632,7 +6631,6 @@
                     start: "top top",
                     end: "bottom bottom",
                     scrub: 1,
-                    markers: true,
                     id: "top"
                 }
             });
@@ -6646,7 +6644,6 @@
                     start: "top top",
                     end: "bottom bottom",
                     scrub: 1,
-                    markers: true,
                     id: "top"
                 }
             });
@@ -6660,7 +6657,6 @@
                     start: "top top",
                     end: "bottom bottom",
                     scrub: 1,
-                    markers: true,
                     id: "top"
                 }
             });
@@ -6674,7 +6670,6 @@
                     start: "top top",
                     end: "bottom bottom",
                     scrub: 1,
-                    markers: true,
                     id: "top"
                 }
             });
@@ -7004,11 +6999,11 @@
             }));
         }));
     }));
-    function setupCookiesModal() {
+    const setupCookiesModal = () => {
         document.addEventListener("DOMContentLoaded", (() => {
             const modal = document.getElementById("cookiesModal");
             const closeButton = document.querySelector(".button-close-modal-cookies");
-            const modalDisplayTime = 3e3;
+            const modalDisplayTime = 7e3;
             const hideDuration = 24 * 60 * 60 * 1e3;
             const showModal = () => {
                 modal.classList.add("show");
@@ -7024,7 +7019,7 @@
             if (shouldShowModal()) setTimeout(showModal, modalDisplayTime);
             closeButton.addEventListener("click", closeModal);
         }));
-    }
+    };
     setupCookiesModal();
     window["FLS"] = true;
     addLoadedClass();
